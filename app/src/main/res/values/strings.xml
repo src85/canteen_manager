@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">CanteenManager</string>
+    <string name="edtUserName_hint">Benutzername</string>
+    <string name="edtPassword_hint">Passwort</string>
+    <string name="btnLogIn_text">Einloggen</string>
+    <string name="btnAddReview_text">Review posten</string>
+    <string name="edtCanteenName_hint">Kantinenname</string>
+    <string name="edtCanteenAddress_hint">Adresse</string>
+    <string name="edtCanteenPhone_hint">Telefon</string>
+    <string name="edtCanteenWeb_hint">Webseite</string>
+    <string name="edtCanteenLoc_hint">Ort</string>
+    <string name="edtCanteenMeal_hint">Tagesmenü</string>
+    <string name="edtCanteenMealPrice_hint">Tagesmenü-Preis</string>
+    <string name="edtCanteenWaitingTime_hint">Wartezeit</string>
+    <string name="txvCanteenWaitingTimeLabel_text">Durchschnittliche Wartezeit in Minuten</string>
+    <string name="btnCanteenSave_text">Speichern</string>
+    <string name="btnRatingDelete_text">Löschen</string>
+    <string name="btnChangesRevert_text">Rückgängig</string>
+    <string name="txvModifyActivityHeader_text">Ihre Kantine</string>
+    <string name="txvLoginActivityHeader_text">Bitte loggen Sie sich ein</string>
+    <string name="msg_LoginFailed">Login gescheitert</string>
+    <string name="msg_LoadingRatingsFailed">Herunterladen der Bewertungen fehlgeschlagen</string>
+    <string name="msg_LoadingRatings">Lade Bewertungen für Kantine herunter</string>
+    <string name="msg_LoadingCanteen">Kantine wird geladen</string>
+    <string name="msg_LoadingCanteenFailed">Laden der Kantine gescheitert</string>
+    <string name="lab_canteen">Kantine</string>
+    <string name="lab_editCanteen">Kantine bearbeiten</string>
+    <string name="lab_manageRatings">Bewertungen verwalten</string>
+    <string name="mniLogout_title">Ausloggen</string>
+    <string name="dlgDeleteRating_title">Bewertung löschen</string>
+    <string name="dlgDeleteRating_positiveButton">Ja, löschen</string>
+    <string name="msg_ratingDeleted">Bewertung gelöscht</string>
+    <string name="msg_ratingNotDeleted">Bewertung nicht gelöscht</string>
+    <string name="txvReviewHeader_text">Ihre Bewertungen</string>
+    <string name="dlgDeleteRating_negativeButton">Nein, doch nicht</string>
+</resources>

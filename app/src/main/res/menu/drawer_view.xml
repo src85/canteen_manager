@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_editCanteen"
+            android:icon="@drawable/ic_mode_edit_black"
+            android:title="@string/lab_editCanteen" />
+        <item
+            android:id="@+id/nav_manageRatings"
+            android:icon="@drawable/ic_playlist_add_check_black"
+            android:title="@string/lab_manageRatings" />
+    </group>
+</menu>

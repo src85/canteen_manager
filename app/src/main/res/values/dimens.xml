@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="distance_large">120dp</dimen>
+    <dimen name="distance_double_medium">48dp</dimen>
+    <dimen name="distance_double_medium_plus">60dp</dimen>
+    <dimen name="distance_ml">72dp</dimen>
+    <dimen name="distance_ms">16dp</dimen>
+    <dimen name="distance_medium">24dp</dimen>
+    <dimen name="distance_small_plus">12dp</dimen>
+    <dimen name="distance_small">8dp</dimen>
+    <dimen name="distance_extra_small">4dp</dimen>
+
+    <dimen name="canteen_details_map_height">240dp</dimen>
+    <dimen name="divider_thickness">1dp</dimen>
+    <dimen name="rating_bar_height">6dp</dimen>
+
+    <dimen name="text_box_font_size">20sp</dimen>
+    <dimen name="text_view_font_size">16sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

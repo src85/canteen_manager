@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3CA2E0</color>
+    <color name="colorPrimaryDark">#27688F</color>
+    <color name="colorAccent">#99DD2A</color>
+
+    <color name="ratingsFive">#009900</color>
+    <color name="ratingsFour">#66CC00</color>
+    <color name="ratingsThree">#CC11CC</color>
+    <color name="ratingsTwo">#FF00FF</color>
+    <color name="ratingsOne">#33FF00</color>
+
+    <color name="newBlack">#000000</color>
+    <color name="canteenCheckerBackground">#3CA2E0</color>
+    <color name="materialForeground">#FAFAFA</color>
+    <color name="lighterGrey">#DEC1FF</color>
+    <color name="deleteBackground">#EE6352</color>
+</resources>
