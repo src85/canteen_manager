@@ -3,6 +3,10 @@
 *.ap_
 *.aab
 
+# Documentation Word
+Dokumentation/*
+!Dokumentation/S1610307038_CanteenManager.pdf
+
 # Files for the ART/Dalvik VM
 *.dex
 
