@@ -7,7 +7,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class CanteenManagerApplication extends Application {
 
-    private static final String FIREBASE_MESSAGING_TOPIC = "ratings";
+    private static final String FIREBASE_MESSAGING_TOPIC = "canteens";
     private static CanteenManagerApplication instance;
 
     public static CanteenManagerApplication getInstance() {

@@ -29,7 +29,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         Map<String, String> data = remoteMessage.getData();
-        if (REMOTE_MESSAGE_TYPE_VALUE.equals(REMOTE_MESSAGE_TYPE_KEY)) {
+        if (REMOTE_MESSAGE_TYPE_VALUE.equals(data.get(REMOTE_MESSAGE_TYPE_KEY))) {
             // --> this is a "canteenDataChanged" message
             String canteenId = data.get(REMOTE_MESSAGE_CANTEEN_ID_KEY);
 

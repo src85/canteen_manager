@@ -38,7 +38,7 @@ import java.util.List;
 public class RatingsFragment extends Fragment {
 
     private static final String TAG = RatingsFragment.class.toString();
-    private static final String CANTEEN_ID_KEY = "CanteenId";
+    private static final String CANTEEN_ID_KEY = "canteenId";
     private static final int LOGIN_FOR_REVIEW_DELETION = 2210;
 
     public static Fragment create(String canteenId) {
@@ -165,8 +165,7 @@ public class RatingsFragment extends Fragment {
                                     Toast.makeText(getActivity(),
                                             b ? getString(R.string.msg_ratingDeleted) : getString(R.string.msg_ratingNotDeleted),
                                             Toast.LENGTH_SHORT).show();
-                                    updateRatings();
-
+                                    //updateRatings();
                                 }
                             }.execute(
                                     CanteenManagerApplication.getInstance().getAuthenticationToken()

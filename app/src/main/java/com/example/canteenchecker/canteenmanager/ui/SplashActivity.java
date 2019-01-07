@@ -15,7 +15,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // fake procedure to show splash for 2 sec
+                // fake procedure to show splash for 2 secs
                 Intent intent = LoginActivity.createIntent(SplashActivity.this);
                 startActivity(intent);
                 finish();

@@ -45,7 +45,7 @@ import java.util.TimerTask;
 public class CanteenFragment extends Fragment {
 
     private static final String TAG = CanteenFragment.class.toString();
-    private static final String CANTEEN_ID_KEY = "CanteenId";
+    private static final String CANTEEN_ID_KEY = "canteenId";
     private static final int DEFAULT_MAP_ZOOM_FACTOR = 17;
 
     public static Fragment create() {
@@ -218,6 +218,7 @@ public class CanteenFragment extends Fragment {
                 if (canteen != null) {
                     CanteenFragment.this.canteen = canteen;
                     getArguments().putString(CANTEEN_ID_KEY, canteen.getId());
+                    getActivity().getIntent().putExtra(CANTEEN_ID_KEY, canteen.getId());
                     CanteenManagerApplication.getInstance().setCanteenId(canteen.getId());
 
                     setUIFields();

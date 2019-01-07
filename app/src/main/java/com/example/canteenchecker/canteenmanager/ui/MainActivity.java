@@ -10,7 +10,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -23,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private final String TAG = MainActivity.class.toString();
 
     public static Intent createIntent(Context context) {
-        return new Intent(context, MainActivity.class);
+        Intent intent = new Intent(context, MainActivity.class);
+        return intent;
     }
 
     @Override
@@ -47,12 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        // set item as selected to persist highlight
                         menuItem.setChecked(true);
-                        // close drawer when item is tapped
                         mDrawerLayout.closeDrawers();
-
-                        //Log.v(TAG, ((Integer) menuItem.getItemId()).toString());
+                        
                         int id = menuItem.getItemId();
 
                         switch (id) {
@@ -117,5 +114,10 @@ public class MainActivity extends AppCompatActivity {
         menu.findItem(R.id.mniLogout)
                 .setVisible(CanteenManagerApplication.getInstance().isAuthenticated());
         return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
