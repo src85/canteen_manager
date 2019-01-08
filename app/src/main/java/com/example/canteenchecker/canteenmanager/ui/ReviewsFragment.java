@@ -103,7 +103,7 @@ public class ReviewsFragment extends Fragment {
             @Override
             protected void onPostExecute(ReviewData reviewData) {
                 if (reviewData != null) {
-                    txvAverageRating.setText(NumberFormat.getNumberInstance().format(reviewData.getAverageRating()));
+                    txvAverageRating.setText(String.format("%.2f", reviewData.getAverageRating()));
                     txvTotalRatings.setText(NumberFormat.getNumberInstance().format(reviewData.getTotalRatings()));
                     rtbAverageRating.setRating(reviewData.getAverageRating());
                     setWeight(viwRatingOne, reviewData.getRatingsOne(), reviewData.getTotalRatingsOfMostCommonGrade());

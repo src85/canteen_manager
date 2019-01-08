@@ -246,7 +246,7 @@ public class CanteenFragment extends Fragment {
         edtCanteenPhone.setText(canteen.getPhoneNumber());
         edtCanteenWeb.setText(canteen.getWebsite());
         edtSetCanteenMeal.setText(canteen.getMeal());
-        edtSetCanteenMealPrice.setText(NumberFormat.getNumberInstance().format(canteen.getMealPrice()));
+        edtSetCanteenMealPrice.setText(String.format("%.2f", canteen.getMealPrice()));
         txvCanteenWaitingTime.setText(String.valueOf(canteen.getAverageWaitingTime()));
         sbaCanteenSetWaitingTime.setProgress(canteen.getAverageWaitingTime());
     }
@@ -296,7 +296,18 @@ public class CanteenFragment extends Fragment {
     }
 
     private void saveCanteen() {
+
+        float mealPrice;
+        try {
+            mealPrice = Float.parseFloat(edtSetCanteenMealPrice.getText()
+                    .toString().replaceAll(",", "."));
+        } catch (Exception e) {
+            mealPrice = this.canteen.getMealPrice();
+        }
+
         setUIEnabled(false);
+        viwProgress.setVisibility(View.VISIBLE);
+        viwContent.setVisibility(View.GONE);
         new AsyncTask<Object, Void, Void>() {
             @Override
             protected Void doInBackground(Object... objects) {
@@ -332,6 +343,8 @@ public class CanteenFragment extends Fragment {
                             Log.e(TAG, getString(R.string.msg_LoadingCanteenFailed));
                         }
                         setUIEnabled(true);
+                        viwProgress.setVisibility(View.GONE);
+                        viwContent.setVisibility(View.VISIBLE);
                     }
                 }.execute();
             }
@@ -343,8 +356,7 @@ public class CanteenFragment extends Fragment {
                 edtCanteenPhone.getText().toString(),//4
                 edtCanteenWeb.getText().toString(),//5
                 edtSetCanteenMeal.getText().toString(),//6
-                Float.parseFloat(edtSetCanteenMealPrice.getText()
-                        .toString().replaceAll(",", ".")),//7
+                mealPrice,//7
                 canteen.getAverageRating(),//8
                 sbaCanteenSetWaitingTime.getProgress()//9
         );

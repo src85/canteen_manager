@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/distance_small"
-        android:layout_marginTop="@dimen/distance_small_plus"
+        android:layout_marginTop="@dimen/distance_small"
         android:orientation="vertical">
 
         <LinearLayout

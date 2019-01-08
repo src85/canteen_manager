@@ -12,7 +12,7 @@
     <string name="edtCanteenMeal_hint">Tagesmenü</string>
     <string name="edtCanteenMealPrice_hint">Tagesmenü-Preis</string>
     <string name="edtCanteenWaitingTime_hint">Wartezeit</string>
-    <string name="txvCanteenWaitingTimeLabel_text">Durchschnittliche Wartezeit in Minuten</string>
+    <string name="txvCanteenWaitingTimeLabel_text">Durchschnittliche Wartezeit in Minuten:\u00A0</string>
     <string name="btnCanteenSave_text">Speichern</string>
     <string name="btnRatingDelete_text">Löschen</string>
     <string name="btnChangesRevert_text">Rückgängig</string>

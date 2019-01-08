@@ -51,8 +51,8 @@ public class RatingsFragment extends Fragment {
 
     private RatingsAdapter ratingsAdapter = new RatingsAdapter(new IClickedListener() {
         @Override
-        public void onClicked(String id) {
-            deleteRating(id);
+        public void onClicked(String id, Button button) {
+            deleteRating(id, button);
         }
     });
 
@@ -132,8 +132,9 @@ public class RatingsFragment extends Fragment {
         }.execute();
     }
 
-    private void deleteRating(final String ratingId) {
+    private void deleteRating(final String ratingId, final Button button) {
         if (CanteenManagerApplication.getInstance().isAuthenticated()) {
+            button.setEnabled(false);
             //authenticated
             final View view = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_delete_rating, null);
             new AlertDialog.Builder(getActivity())
@@ -143,6 +144,7 @@ public class RatingsFragment extends Fragment {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
+                            button.setEnabled(true);
                         }
                     })
                     .setPositiveButton(getString(R.string.dlgDeleteRating_positiveButton), new DialogInterface.OnClickListener() {
@@ -165,7 +167,6 @@ public class RatingsFragment extends Fragment {
                                     Toast.makeText(getActivity(),
                                             b ? getString(R.string.msg_ratingDeleted) : getString(R.string.msg_ratingNotDeleted),
                                             Toast.LENGTH_SHORT).show();
-                                    //updateRatings();
                                 }
                             }.execute(
                                     CanteenManagerApplication.getInstance().getAuthenticationToken()
@@ -227,7 +228,7 @@ public class RatingsFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     if (holder.clickedListener != null) {
-                        holder.clickedListener.onClicked(r.getId());
+                        holder.clickedListener.onClicked(r.getId(), holder.btnDelete);
                     }
                 }
             });
