@@ -23,14 +23,13 @@
         <item name="android:textColor">@color/materialForeground</item>
     </style>
 
-    <style name="cmCardView" parent="AppTheme">
-        <item name="android:layout_marginTop">@dimen/distance_ms</item>
+    <style name="cmCardView">
+        <item name="android:layout_marginTop">0dp</item>
         <item name="android:layout_marginBottom">@dimen/distance_small</item>
         <item name="android:layout_marginLeft">@dimen/distance_small</item>
         <item name="android:layout_marginRight">@dimen/distance_small</item>
-        <item name="android:padding">@dimen/distance_medium</item>
-        <!--<item name="android:layout_width">match_parent</item>-->
-        <!--<item name="android:layout_height">wrap_content</item>-->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="cmLLContentWrapper">
@@ -38,6 +37,15 @@
         <item name="android:layout_margin">@dimen/distance_small</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="cmTextViewHeader">
+        <item name="android:textColor">@color/materialForeground</item>
+        <item name="android:textSize">@dimen/text_view_header_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/distance_ms</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
     <style name="cmTextView">

@@ -1,46 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/cmCardView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/distance_small"
     android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    app:cardCornerRadius="@dimen/distance_small">
 
     <LinearLayout
-        android:id="@+id/ll_cv_activity_login"
-        style="@style/cmLLContentWrapper">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txvLoginActivityHeader"
-            style="@style/cmTextView"
-            android:text="@string/txvLoginActivityHeader_text"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/text_box_font_size" />
-
-        <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/edtUserName"
-            style="@style/cmInputBox"
-            android:hint="@string/edtUserName_hint"
-            android:inputType="text" />
-
-        <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/edtPassWord"
-            style="@style/cmInputBox"
-            android:hint="@string/edtPassword_hint"
-            android:inputType="textPassword" />
+            android:id="@+id/txvModifyActivityHeader"
+            style="@style/cmTextViewHeader"
+            android:text="@string/txvLoginActivityHeader_text" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="end">
+            style="@style/cmLLContentWrapper"
+            android:layout_marginTop="@dimen/distance_small_plus">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edtUserName"
+                style="@style/cmInputBox"
+                android:hint="@string/edtUserName_hint"
+                android:inputType="text" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edtPassWord"
+                style="@style/cmInputBox"
+                android:hint="@string/edtPassword_hint"
+                android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/btnLogIn"
                 style="@style/cmButton"
+                android:layout_gravity="end"
                 android:text="@string/btnLogIn_text" />
 
         </LinearLayout>
-
     </LinearLayout>
 </android.support.v7.widget.CardView>
 

@@ -7,9 +7,9 @@
     <TextView
         android:id="@+id/txvAverageRating"
         style="@style/TextAppearance.AppCompat.Display1"
-        android:gravity="center_vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -32,7 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_people_black_18dp"
-            android:drawablePadding="@dimen/distance_extra_small" />
+            android:drawablePadding="@dimen/distance_extra_small"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout

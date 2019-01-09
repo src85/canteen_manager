@@ -133,8 +133,8 @@ public class RatingsFragment extends Fragment {
     }
 
     private void deleteRating(final String ratingId, final Button button) {
+        button.setEnabled(false);
         if (CanteenManagerApplication.getInstance().isAuthenticated()) {
-            button.setEnabled(false);
             //authenticated
             final View view = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_delete_rating, null);
             new AlertDialog.Builder(getActivity())
@@ -167,6 +167,7 @@ public class RatingsFragment extends Fragment {
                                     Toast.makeText(getActivity(),
                                             b ? getString(R.string.msg_ratingDeleted) : getString(R.string.msg_ratingNotDeleted),
                                             Toast.LENGTH_SHORT).show();
+                                    button.setEnabled(true);
                                 }
                             }.execute(
                                     CanteenManagerApplication.getInstance().getAuthenticationToken()

@@ -105,6 +105,7 @@ public class ReviewsFragment extends Fragment {
                 if (reviewData != null) {
                     txvAverageRating.setText(String.format("%.2f", reviewData.getAverageRating()));
                     txvTotalRatings.setText(NumberFormat.getNumberInstance().format(reviewData.getTotalRatings()));
+                    txvTotalRatings.setVisibility(View.VISIBLE);
                     rtbAverageRating.setRating(reviewData.getAverageRating());
                     setWeight(viwRatingOne, reviewData.getRatingsOne(), reviewData.getTotalRatingsOfMostCommonGrade());
                     setWeight(viwRatingTwo, reviewData.getRatingsTwo(), reviewData.getTotalRatingsOfMostCommonGrade());

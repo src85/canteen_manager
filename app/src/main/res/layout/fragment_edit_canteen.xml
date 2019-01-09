@@ -1,133 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/distance_ml"
     android:fitsSystemWindows="true">
 
-    <FrameLayout
+    <ProgressBar
+        android:id="@+id/viwProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:id="@+id/manage_ratings_scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ProgressBar
-            android:id="@+id/viwProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="visible" />
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/viwContent"
-            style="@style/cmCardView"
-            android:layout_marginTop="@dimen/distance_extra_small"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/distance_small"
+            android:orientation="vertical">
 
-            <LinearLayout style="@style/cmLLContentWrapper">
-
-                <TextView
-                    android:id="@+id/txvModifyActivityHeader"
-                    style="@style/cmTextView"
-                    android:text="@string/txvModifyActivityHeader_text"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/text_box_font_size" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/edtCanteenName"
-                    style="@style/cmInputBox"
-                    android:hint="@string/edtCanteenName_hint"
-                    android:inputType="text" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/edtCanteenAddress"
-                    style="@style/cmInputBox"
-                    android:hint="@string/edtCanteenAddress_hint"
-                    android:inputType="text" />
-
-                <fragment
-                    android:id="@+id/mpfMap"
-                    class="com.google.android.gms.maps.SupportMapFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/canteen_details_map_height"
-                    android:layout_marginTop="@dimen/distance_small" />
-
-                <include layout="@layout/layout_divider" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/edtCanteenPhone"
-                    style="@style/cmInputBox"
-                    android:hint="@string/edtCanteenPhone_hint"
-                    android:inputType="text" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/edtCanteenWeb"
-                    style="@style/cmInputBox"
-                    android:hint="@string/edtCanteenWeb_hint"
-                    android:inputType="text" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/edtSetCanteenMeal"
-                    style="@style/cmInputBox"
-                    android:hint="@string/edtCanteenMeal_hint"
-                    android:inputType="text" />
-
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/edtSetCanteenMealPrice"
-                    style="@style/cmInputBox"
-                    android:hint="@string/edtCanteenMealPrice_hint"
-                    android:inputType="text" />
+            <android.support.v7.widget.CardView
+                android:id="@+id/viwContent"
+                style="@style/cmCardView"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/distance_small"
+                app:cardPreventCornerOverlap="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txvCanteenWaitingTimeLabel"
-                        style="@style/cmTextView"
-                        android:layout_width="wrap_content"
-                        android:text="@string/txvCanteenWaitingTimeLabel_text" />
+                        android:id="@+id/txvModifyActivityHeader"
+                        style="@style/cmTextViewHeader"
+                        android:text="@string/txvModifyActivityHeader_text" />
 
-                    <TextView
-                        android:id="@+id/txvCanteenWaitingTime"
-                        style="@style/cmTextView"
-                        android:layout_width="wrap_content"
-                        android:textAlignment="center" />
+                    <LinearLayout style="@style/cmLLContentWrapper">
 
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edtCanteenName"
+                            style="@style/cmInputBox"
+                            android:hint="@string/edtCanteenName_hint"
+                            android:inputType="text" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edtCanteenAddress"
+                            style="@style/cmInputBox"
+                            android:hint="@string/edtCanteenAddress_hint"
+                            android:inputType="text" />
+
+                        <fragment
+                            android:id="@+id/mpfMap"
+                            class="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/canteen_details_map_height"
+                            android:layout_marginTop="@dimen/distance_small" />
+
+                        <include layout="@layout/layout_divider" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edtCanteenPhone"
+                            style="@style/cmInputBox"
+                            android:hint="@string/edtCanteenPhone_hint"
+                            android:inputType="text" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edtCanteenWeb"
+                            style="@style/cmInputBox"
+                            android:hint="@string/edtCanteenWeb_hint"
+                            android:inputType="text" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edtSetCanteenMeal"
+                            style="@style/cmInputBox"
+                            android:hint="@string/edtCanteenMeal_hint"
+                            android:inputType="text" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/edtSetCanteenMealPrice"
+                            style="@style/cmInputBox"
+                            android:hint="@string/edtCanteenMealPrice_hint"
+                            android:inputType="text" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txvCanteenWaitingTimeLabel"
+                                style="@style/cmTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_marginStart="@dimen/distance_ms"
+                                android:text="@string/txvCanteenWaitingTimeLabel_text" />
+
+                            <TextView
+                                android:id="@+id/txvCanteenWaitingTime"
+                                style="@style/cmTextView"
+                                android:layout_width="wrap_content"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/sbaCanteenWaitingTime"
+                            style="@style/Widget.AppCompat.SeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/distance_small"
+                            android:max="60"
+                            android:progress="4" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnChangesRevert"
+                                style="@style/cmSecondaryButton"
+                                android:layout_marginBottom="8dp"
+                                android:text="@string/btnChangesRevert_text"
+                                android:textColor="@color/colorAccent" />
+
+                            <Button
+                                android:id="@+id/btnCanteenSave"
+                                style="@style/cmButton"
+                                android:layout_marginBottom="@dimen/distance_small"
+                                android:text="@string/btnCanteenSave_text" />
+
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
-
-                <SeekBar
-                    android:id="@+id/sbaCanteenWaitingTime"
-                    style="@style/Widget.AppCompat.SeekBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/distance_small"
-                    android:max="60"
-                    android:progress="4" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btnChangesRevert"
-                        style="@style/cmSecondaryButton"
-                        android:textColor="@color/colorAccent"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/btnChangesRevert_text" />
-
-                    <Button
-                        android:id="@+id/btnCanteenSave"
-                        style="@style/cmButton"
-                        android:layout_marginBottom="@dimen/distance_small"
-                        android:text="@string/btnCanteenSave_text" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </FrameLayout>
-</ScrollView>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
